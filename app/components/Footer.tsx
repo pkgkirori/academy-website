@@ -5,10 +5,11 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300 px-6 pt-14 pb-6">
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10">
         <div>
-          <div className="flex items-center gap-1 mb-3">
-            <span className="text-white text-xl font-black">Code</span>
-            <span className="text-blue-400 text-xl font-black">Lab</span>
-            <span className="ml-1 text-xs font-semibold bg-blue-600 text-white px-2 py-0.5 rounded-full">Hisar</span>
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-xl font-black leading-none">
+              <span className="text-white">Code</span><span className="text-blue-400">Lab</span>
+            </span>
+            <span className="text-xs font-semibold bg-blue-600 text-white px-2 py-0.5 rounded-full">Hisar</span>
           </div>
           <p className="text-sm leading-relaxed text-gray-400">
             A coding coaching centre in Hisar, Haryana. We teach real skills that get you hired.
@@ -32,7 +33,7 @@ export default function Footer() {
             <li><Link href="/courses" className="hover:text-blue-400 transition-colors">Full-Stack Web Dev</Link></li>
             <li><Link href="/courses" className="hover:text-blue-400 transition-colors">DSA & Competitive Coding</Link></li>
             <li><Link href="/courses" className="hover:text-blue-400 transition-colors">Python / AI / ML</Link></li>
-            <li><Link href="/courses" className="hover:text-blue-400 transition-colors">C / C++ Programming</Link></li>
+            <li><Link href="/courses" className="hover:text-blue-400 transition-colors">C / C++ / Java Programming</Link></li>
           </ul>
         </div>
 

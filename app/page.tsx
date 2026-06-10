@@ -3,10 +3,18 @@ import LeadCaptureForm from './components/LeadCaptureForm';
 
 const courses = [
   {
+    icon: '🚀',
+    title: 'Zero to Hero (Software Engineer Program)',
+    duration: '12 Months',
+    desc: 'Become a job-ready software engineer from scratch. Full curriculum, industry mentors, and placement guarantee — ₹15,000 to ₹30,000 salary/stipend for 12 months with Software Engineer Trainee opportunity.',
+    tag: 'Flagship Program',
+    forDegree: '12th pass · B.Sc · BCA · BBA · B.Com · BA',
+    featured: true,
+  },
+  {
     icon: '🌐',
     title: 'Full-Stack Web Development',
     duration: '6 Months',
-    fee: '₹18,000',
     desc: 'HTML, CSS, JS, React, Node.js, MongoDB. Build real-world projects and deploy live apps.',
     tag: 'Most Popular',
     forDegree: 'BCA · MCA · B.Tech (any)',
@@ -15,7 +23,6 @@ const courses = [
     icon: '🧮',
     title: 'DSA & Competitive Coding',
     duration: '4 Months',
-    fee: '₹12,000',
     desc: 'Arrays, Linked Lists, Trees, Graphs, DP. Crack coding interviews at TCS, Infosys, and startups.',
     tag: 'Interview Ready',
     forDegree: 'B.Tech CSE/IT · MCA · BCA 3rd yr',
@@ -24,17 +31,15 @@ const courses = [
     icon: '🤖',
     title: 'Python / AI / ML',
     duration: '5 Months',
-    fee: '₹15,000',
     desc: 'Python, NumPy, Pandas, ML algorithms, model building and deployment.',
     tag: 'Future Tech',
     forDegree: 'Any degree · No prior coding needed',
   },
   {
     icon: '⚙️',
-    title: 'C / C++ Programming',
-    duration: '3 Months',
-    fee: '₹8,000',
-    desc: 'Programming fundamentals, OOP, STL, competitive coding with C++.',
+    title: 'C / C++ / Java Programming',
+    duration: '4 Months',
+    desc: 'Programming fundamentals in C & C++, plus Core Java — OOP, collections, and backend-ready skills.',
     tag: 'Strong Foundation',
     forDegree: 'BCA 1st yr · B.Tech 1st yr · 12th pass',
   },
@@ -44,7 +49,7 @@ const batches = [
   { course: 'Full-Stack Web Dev', date: 'June 1, 2026', time: 'Morning  9–11 AM', seats: 8, color: 'border-blue-400' },
   { course: 'DSA & Competitive Coding', date: 'June 1, 2026', time: 'Evening  6–8 PM', seats: 6, color: 'border-green-400' },
   { course: 'Python / AI / ML', date: 'June 15, 2026', time: 'Morning  10–12 PM', seats: 10, color: 'border-purple-400' },
-  { course: 'C / C++ Programming', date: 'June 15, 2026', time: 'Evening  5–7 PM', seats: 12, color: 'border-orange-400' },
+  { course: 'C / C++ / Java Programming', date: 'June 15, 2026', time: 'Evening  5–7 PM', seats: 12, color: 'border-orange-400' },
 ];
 
 const degreeGuide = [
@@ -337,18 +342,16 @@ export default function Home() {
           <h2 className="text-3xl font-black text-gray-900">Our <span className="text-blue-600">Courses</span></h2>
           <p className="text-gray-500 mt-2 text-sm">Each course is built around what interviewers actually ask — not what textbooks say.</p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((c, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg transition-shadow relative flex flex-col">
-              <span className="absolute top-4 right-4 text-xs bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded-full">
+            <div key={i} className={`bg-white rounded-2xl border p-6 hover:shadow-lg transition-shadow relative flex flex-col ${'featured' in c && c.featured ? 'border-yellow-400 border-2 shadow-md' : 'border-gray-100'}`}>
+              <span className={`absolute top-4 right-4 text-xs font-semibold px-2 py-0.5 rounded-full ${'featured' in c && c.featured ? 'bg-yellow-100 text-yellow-800' : 'bg-blue-50 text-blue-700'}`}>
                 {c.tag}
               </span>
               <div className="text-4xl mb-4">{c.icon}</div>
               <h3 className="font-bold text-gray-800 text-sm mb-1">{c.title}</h3>
-              <div className="flex items-center gap-2 mb-3">
+              <div className="mb-3">
                 <span className="text-xs text-blue-600 font-medium">{c.duration}</span>
-                <span className="text-gray-300">·</span>
-                <span className="text-xs font-bold text-gray-700">{c.fee}</span>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed flex-1">{c.desc}</p>
               <p className="mt-3 text-xs text-gray-400 border-t border-gray-50 pt-3">Best for: {c.forDegree}</p>
@@ -362,15 +365,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ROI framing ── */}
+      {/* ── Career outcomes ── */}
       <section className="bg-blue-600 px-4 sm:px-6 py-12 text-white text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-black mb-6">The Return on Investment</h2>
+          <h2 className="text-2xl font-black mb-6">What You Get Out of It</h2>
           <div className="grid grid-cols-3 gap-6">
             {[
-              { label: 'DSA Course fee', value: '₹12,000' },
+              { label: 'Industry mentors', value: '7+ yrs' },
               { label: 'Fresher salary at TCS', value: '₹3.5 LPA' },
-              { label: 'Fee recovered in', value: '41 days' },
+              { label: 'Placement support', value: 'Till placed' },
             ].map((s, i) => (
               <div key={i}>
                 <p className="text-3xl font-black">{s.value}</p>

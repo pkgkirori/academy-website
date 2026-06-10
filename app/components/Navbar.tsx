@@ -19,9 +19,10 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl font-black text-blue-600">Code</span>
-          <span className="text-2xl font-black text-gray-800">Lab</span>
-          <span className="ml-1 text-sm font-semibold bg-blue-600 text-white px-2 py-0.5 rounded-full">Hisar</span>
+          <span className="text-2xl font-black leading-none">
+            <span className="text-blue-600">Code</span><span className="text-gray-800">Lab</span>
+          </span>
+          <span className="text-sm font-semibold bg-blue-600 text-white px-2 py-0.5 rounded-full">Hisar</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-5 text-sm font-medium text-gray-700">

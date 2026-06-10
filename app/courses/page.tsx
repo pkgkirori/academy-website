@@ -2,10 +2,32 @@ import Link from 'next/link';
 
 const courses = [
   {
+    icon: '🚀',
+    title: 'Zero to Hero (Software Engineer Program)',
+    duration: '12 Months',
+    tag: 'Flagship Program',
+    tagColor: 'bg-yellow-100 text-yellow-800',
+    desc: 'Become a job-ready software engineer in 12 months — from zero coding experience to placement. Learn from IIT & NIT alumni with 7+ years industry experience. Includes structured curriculum, real-world projects, mock interviews by working professionals, and end-to-end career support.',
+    placementGuarantee: {
+      salary: '₹15,000 to ₹30,000 salary or stipend',
+      salaryNote: 'For still graduating students — for 12 months',
+      opportunity: 'Successful candidates will be offered a Software Engineer Trainee opportunity after completing the program.',
+      disclaimer: 'Based on performance and role allocated. Subject to successful completion of the program and meeting performance requirements.',
+    },
+    syllabus: [
+      { week: 'Month 1–2', topic: 'Programming Fundamentals & Problem Solving', details: 'C / Java basics, logic building, problem-solving techniques from scratch' },
+      { week: 'Month 3–4', topic: 'DSA & Object Oriented Programming', details: 'Arrays, linked lists, trees, graphs, classes, inheritance, polymorphism' },
+      { week: 'Month 5–6', topic: 'DBMS, Networks & Operating Systems', details: 'SQL, normalization, TCP/IP, HTTP, processes, memory management' },
+      { week: 'Month 7–8', topic: 'System Design & Web Development', details: 'Scalability basics, HTML, CSS, JavaScript, responsive UI' },
+      { week: 'Month 9–10', topic: 'Backend Development (Core Java)', details: 'REST APIs, Spring basics, server-side logic, database integration' },
+      { week: 'Month 11–12', topic: 'Projects, Interviews & Placement', details: 'Portfolio projects, aptitude prep, mock interviews, placement guarantee with Software Engineer Trainee offer' },
+    ],
+    jobs: ['Software Engineer', 'Software Engineer Trainee', 'Backend Developer', 'Full-Stack Developer'],
+  },
+  {
     icon: '🌐',
     title: 'Full-Stack Web Development',
     duration: '6 Months',
-    fee: '₹18,000',
     tag: 'Most Popular',
     tagColor: 'bg-blue-100 text-blue-700',
     desc: 'Learn everything you need to build complete web applications — from UI design to server logic and database management.',
@@ -23,7 +45,6 @@ const courses = [
     icon: '🧮',
     title: 'DSA & Competitive Coding',
     duration: '4 Months',
-    fee: '₹12,000',
     tag: 'Interview Ready',
     tagColor: 'bg-green-100 text-green-700',
     desc: 'Master Data Structures and Algorithms — the core skill tested in every software engineering interview at any company.',
@@ -39,7 +60,6 @@ const courses = [
     icon: '🤖',
     title: 'Python / AI / ML',
     duration: '5 Months',
-    fee: '₹15,000',
     tag: 'Future Tech',
     tagColor: 'bg-purple-100 text-purple-700',
     desc: 'Start from Python basics and advance to building real AI/ML models. The most in-demand skill of the decade.',
@@ -54,18 +74,18 @@ const courses = [
   },
   {
     icon: '⚙️',
-    title: 'C / C++ Programming',
-    duration: '3 Months',
-    fee: '₹8,000',
+    title: 'C / C++ / Java Programming',
+    duration: '4 Months',
     tag: 'Strong Foundation',
     tagColor: 'bg-orange-100 text-orange-700',
-    desc: 'Build a rock-solid programming foundation. C/C++ sharpens your logic and opens doors to competitive programming and embedded systems.',
+    desc: 'Build a rock-solid programming foundation with C, C++, and Java. C/C++ sharpens your logic for competitive programming and embedded systems; Java prepares you for backend development and enterprise software roles.',
     syllabus: [
       { week: 'Month 1', topic: 'C Language Basics', details: 'Variables, data types, operators, loops, functions, arrays, pointers' },
       { week: 'Month 2', topic: 'C++ & OOP', details: 'Classes, objects, inheritance, polymorphism, encapsulation, templates' },
       { week: 'Month 3', topic: 'STL & Competitive Coding', details: 'Vectors, maps, sets, iterators, Codeforces/LeetCode problem solving' },
+      { week: 'Month 4', topic: 'Java Programming', details: 'Core Java syntax, OOP in Java, collections, exception handling, file I/O, JDBC basics' },
     ],
-    jobs: ['C++ Developer', 'Game Developer', 'Embedded Engineer', 'Competitive Coder'],
+    jobs: ['Java Developer', 'C++ Developer', 'Backend Developer', 'Competitive Coder'],
   },
 ];
 
@@ -98,12 +118,20 @@ export default function CoursesPage() {
                     </div>
                   </div>
                 </div>
-                <div className="text-right">
-                  <p className="text-2xl font-black text-blue-600">{course.fee}</p>
-                  <p className="text-xs text-gray-400">One-time fee</p>
-                </div>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed">{course.desc}</p>
+
+              {'placementGuarantee' in course && course.placementGuarantee && (
+                <div className="mt-4 bg-green-50 border border-green-200 rounded-xl px-4 py-4">
+                  <h3 className="text-sm font-black text-green-900 uppercase tracking-wide mb-3">Placement Guarantee</h3>
+                  <p className="text-lg font-black text-green-800">{course.placementGuarantee.salary}*</p>
+                  <p className="text-sm text-green-700 mt-1">{course.placementGuarantee.salaryNote}</p>
+                  <p className="text-sm text-green-900 mt-3 leading-relaxed">{course.placementGuarantee.opportunity}</p>
+                  <p className="text-xs text-green-600 mt-3 leading-relaxed">
+                    *{course.placementGuarantee.disclaimer}
+                  </p>
+                </div>
+              )}
 
               {/* Job roles */}
               <div className="mt-4 flex flex-wrap gap-2">

@@ -51,10 +51,11 @@ export default function LeadCaptureForm() {
           className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
         >
           <option value="">Which course interests you?</option>
+          <option value="zero-to-hero">Zero to Hero — Software Engineer Program</option>
           <option value="fullstack">Full-Stack Web Development</option>
           <option value="dsa">DSA / Competitive Coding</option>
           <option value="python">Python / AI / ML</option>
-          <option value="cpp">C / C++ Programming</option>
+          <option value="cpp">C / C++ / Java Programming</option>
           <option value="unsure">Not sure — help me decide</option>
         </select>
         <button

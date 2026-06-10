@@ -169,10 +169,11 @@ export default function ContactPage() {
                   className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                 >
                   <option value="">Which course interests you? *</option>
-                  <option value="fullstack">Full-Stack Web Development (6 months · ₹18,000)</option>
-                  <option value="dsa">DSA & Competitive Coding (4 months · ₹12,000)</option>
-                  <option value="python">Python / AI / ML (5 months · ₹15,000)</option>
-                  <option value="cpp">C / C++ Programming (3 months · ₹8,000)</option>
+                  <option value="zero-to-hero">Zero to Hero — Software Engineer Program (12 months)</option>
+                  <option value="fullstack">Full-Stack Web Development (6 months)</option>
+                  <option value="dsa">DSA & Competitive Coding (4 months)</option>
+                  <option value="python">Python / AI / ML (5 months)</option>
+                  <option value="cpp">C / C++ / Java Programming (4 months)</option>
                   <option value="unsure">Not sure — help me decide</option>
                 </select>
                 <textarea
@@ -229,7 +230,7 @@ export default function ContactPage() {
               { q: 'I\'m in 1st year BCA. Is it too early to join?', a: 'Not at all. Starting in 1st year with C/C++ foundations puts you 2 years ahead of your classmates. By 3rd year you\'ll have real projects on GitHub when others are just starting to think about placements.' },
               { q: 'I failed TCS NQT / campus interviews. Can you help?', a: 'Yes — this is exactly who we help most. The DSA + mock interview course is specifically designed for students who have the degree but failed the interview. Most students see improvement within the first month.' },
               { q: 'Do I need any prior coding knowledge?', a: 'No. We have separate starting points for complete beginners (C/C++ first) and students who already know basics (DSA or Full-Stack directly).' },
-              { q: 'Is there an EMI option for fees?', a: 'Yes. We offer 2–3 month installment plans. Discuss when you visit or WhatsApp us.' },
+              { q: 'Are there flexible payment options?', a: 'Yes. We offer installment plans for eligible courses. Discuss options when you visit or WhatsApp us.' },
               { q: 'Can I attend a demo class before deciding?', a: 'Absolutely — that is what the demo class is for. Walk in, attend 2 hours, see the teaching style, talk to current students. No fee, no form, no pressure.' },
             ].map((faq, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-5">
@@ -248,7 +249,7 @@ export default function ContactPage() {
         <div className="space-y-4">
           {[
             { q: 'Is this a recognised / government-certified course?', a: 'Our courses are industry-aligned, not government-certificate programmes. We focus on getting your child a software job — which is what employers value, not a certificate. However, students who want government certifications (like NIELIT O-Level) can pursue those alongside.' },
-            { q: 'What is the fee and is there a guarantee?', a: 'Fees range from ₹8,000 (C/C++) to ₹18,000 (Full-Stack). We offer a full refund if your child is not satisfied after the first week. We also provide placement support — resume building, mock interviews, and referrals — until they get placed.' },
+            { q: 'What is the cost and is there a guarantee?', a: 'Course details and payment options are shared when you visit or contact us. We offer a full refund if your child is not satisfied after the first week. We also provide placement support — resume building, mock interviews, and referrals — until they get placed.' },
             { q: 'My child already goes to college. Can they manage both?', a: 'Yes. We offer morning and evening batches specifically so students can attend classes alongside college. Many of our students are in 2nd or 3rd year of BCA/MCA/BTech while studying with us.' },
             { q: 'What kind of job will my child get after this?', a: 'Realistic first jobs range from ₹2.5 LPA (internships, small IT firms) to ₹6 LPA (product startups, mid-tier MNCs). Students who invest in DSA training target TCS/Infosys at ₹3.5–4.5 LPA. Salaries grow fast in tech — 2–3 years of experience typically doubles the starting salary.' },
             { q: 'How is this different from the computer classes near our home?', a: 'Local institutes like IECS and Sarva teach basic computer literacy — CCC, DCA, MS Office, Tally. These are for general computer skills, not software engineering jobs. CodeLab specifically trains for software company interviews, coding rounds, and building deployable projects.' },
